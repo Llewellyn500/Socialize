@@ -1,71 +1,122 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaYoutube, FaInstagram, FaTwitter, FaGithub, FaGamepad } from 'react-icons/fa';
+import React from "react";
+import Link from "next/link";
+import {
+  FaYoutube,
+  FaInstagram,
+  FaGithub,
+  FaGamepad,
+  FaLinkedin,
+  FaGlobe,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Home() {
   const sections = [
     {
-      header: 'My YouTube Channels',
+      header: "My YouTube Channels",
       links: [
-        { name: 'LAP YouTube Channel', url: 'https://youtube.com', icon: <FaYoutube /> },
-        { name: 'Arclapain YouTube Channel', url: 'https://youtube.com', icon: <FaYoutube /> },
+        {
+          name: "LAP - Tutorials YouTube Channel",
+          url: "https://www.youtube.com/@lap-tutorials",
+          icon: <FaYoutube />,
+        },
+        {
+          name: "Arclapain YouTube Channel",
+          url: "https://www.youtube.com/@arclapain",
+          icon: <FaYoutube />,
+        },
       ],
     },
     {
-      header: 'My Socials',
+      header: "My Socials",
       links: [
-        { name: 'My Instagram', url: 'https://instagram.com', icon: <FaInstagram /> },
-        { name: 'Twitter', url: 'https://twitter.com', icon: <FaTwitter /> },
-        { name: 'GitHub', url: 'https://github.com', icon: <FaGithub /> },
+        {
+          name: "LinkedIn",
+          url: "https://www.linkedin.com/in/llewellynpaintsil/",
+          icon: <FaLinkedin />,
+        },
+        {
+          name: "My Instagram",
+          url: "https://www.instagram.com/llewellynpaint/",
+          icon: <FaInstagram />,
+        },
+        {
+          name: "x.com",
+          url: "https://x.com/LlewellynAdont1",
+          icon: <FaXTwitter />,
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/Llewellyn500",
+          icon: <FaGithub />,
+        },
       ],
     },
     {
-      header: 'Other Links',
+      header: "Other Links",
       links: [
-        { name: 'Games I’ve Played', url: '#', icon: <FaGamepad /> },
+        {
+          name: "Portfolio",
+          url: "https://llewellyn-portfolio.vercel.app/",
+          icon: <FaGlobe />,
+        },
+        {
+          name: "Games I’ve Played",
+          url: "https://www.ign.com/playlist/Arclapain",
+          icon: <FaGamepad />,
+        },
       ],
     },
   ];
 
   return (
-    <div className="flex flex-col items-center w-full max-w-xl p-4">
-      {/* Profile Section */}
-      <div className="flex flex-col items-center">
-        <div className="w-20 h-20 rounded-full bg-accent mb-4"></div>
-        <h1 className="text-xl font-semibold">Llewellyn Paintsil</h1>
-        <p className="text-sm text-gray-400">
-          Content Creator and Software Developer
-        </p>
-      </div>
-
-      {/* Links Sections */}
-      {sections.map((section, sectionIndex) => (
-        <div key={sectionIndex} className="mt-6 w-full">
-          <h2 className="text-center text-lg mb-4">{section.header}</h2>
-          {section.links.map((link, index) => (
-            <a
-              key={index}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-between bg-card text-accent py-3 px-4 rounded-lg mb-2 hover:bg-gray-700 transition"
-            >
-              <div className="flex items-center">
-                <span className="text-xl mr-3">{link.icon}</span>
-                <span>{link.name}</span>
-              </div>
-              <span className="text-gray-400">⋮</span>
-            </a>
-          ))}
+    <div className="relative w-full min-h-screen bg-background">
+      {/* Foreground Content */}
+      <div className="relative z-10 flex flex-col items-center w-full max-w-xl mx-auto p-6 mt-8">
+        {/* Profile Section */}
+        <div className="flex flex-col items-center">
+          <div
+            className="w-20 h-20 rounded-full bg-accent mb-4 bg-center bg-cover"
+            style={{ backgroundImage: `url('/profile-image.png')` }}
+          ></div>
+          <h1 className="text-xl font-semibold text-white">
+            Llewellyn Paintsil
+          </h1>
+          <p className="text-sm text-gray-400">
+            Content Creator and Software Developer
+          </p>
         </div>
-      ))}
 
-      {/* Footer Section */}
-      <Link href="https://github.com/Llewellyn500/socialize">
-        <button className="mt-6 bg-gray-800 text-white py-2 px-6 rounded-full hover:bg-gray-700">
-          Edit your version from GitHub
-        </button>
-      </Link>
+        {/* Links Sections */}
+        {sections.map((section, sectionIndex) => (
+          <div key={sectionIndex} className="mt-6 w-full">
+            <h2 className="text-center text-lg mb-4 text-white">
+              {section.header}
+            </h2>
+            {section.links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between bg-card text-accent py-5 px-8 mb-3 hover:bg-[#8a2be2] duration-700 transition"
+              >
+                <div className="flex items-center">
+                  <span className="text-4xl text-white mr-7">{link.icon}</span>
+                  <span className="text-white">{link.name}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        ))}
+
+        {/* Footer Section */}
+        <Link href="https://github.com/Llewellyn500/socialize">
+          <button className="mt-6 bg-[#8a2be2] text-[#121212] font-bold py-2 px-6 rounded-full hover:bg-[#8a2be250] duration-700 transition">
+            Fork to edit
+          </button>
+        </Link>
+      </div>
     </div>
   );
 }

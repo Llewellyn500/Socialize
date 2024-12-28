@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#0e0e10', // Dark background color
+        background: '#121212', // Dark background color
         card: '#1f1f23',       // Card background
         accent: '#ffffff',     // White text
       },
