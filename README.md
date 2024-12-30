@@ -4,6 +4,11 @@
 
 Experience the simplicity of having you very own linktree alternative hosted and created by you. All you need to do is add your very own images then replace the links with your own.
 
+---
+
+---
+
+---
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
