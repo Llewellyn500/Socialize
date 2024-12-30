@@ -1,4 +1,4 @@
-<img src="./public/socialize-logo.png" align="left" width="100"/>
+<img src="./public/socialize-logo.png" align="left" width="200"/>
 
 ### `Socialize`
 
