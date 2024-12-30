@@ -77,7 +77,7 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div
             className="w-20 h-20 rounded-full bg-accent mb-4 bg-center bg-cover"
-            style={{ backgroundImage: `url('/profile-image.png')` }}
+            style={{ backgroundImage: `url('/profile-pic.png')` }}
           ></div>
           <h1 className="text-xl font-semibold text-white">
             Llewellyn Paintsil
