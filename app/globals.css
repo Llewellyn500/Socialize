@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  scrollbar-width: 4px;
+  scrollbar-color: #8a2be2 #121212;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
