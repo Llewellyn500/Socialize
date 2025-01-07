@@ -7,8 +7,12 @@ import {
   FaGamepad,
   FaLinkedin,
   FaGlobe,
+  FaPatreon,
+  FaTiktok,
+  FaEnvelope,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaX, FaXTwitter } from "react-icons/fa6";
+import ProfileImage  from "../public/LAP-Logo.png"
 
 export default function Home() {
   const sections = [
@@ -67,6 +71,46 @@ export default function Home() {
         },
       ],
     },
+    {
+      header: "LAP - Tutorials",
+      links: [
+        {
+          name: "LAP Docs",
+          url: "https://lap-docs.vercel.app",
+          icon: <img src={ProfileImage.src} alt="Profile" className="w-9 h-9" />,
+        },
+        {
+          name: "GitHub",
+          url: "https://github.com/LAP-Tutorials",
+          icon: <FaGithub />,
+        },
+        {
+          name: "Patreon",
+          url: "https://patreon.com/lap_mgmt",
+          icon: <FaPatreon />,
+        },
+        {
+          name: "TikTok",
+          url: "https://tiktok.com/@lap_mgmt",
+          icon: <FaTiktok />,
+        },
+        {
+          name: "Instagram",
+          url: "https://instagram.com/lap.mgmt.team",
+          icon: <FaInstagram />,
+        },
+        {
+          name: "X.com",
+          url: "https://instagram.com/lap.mgmt.team",
+          icon: <FaXTwitter />,
+        },
+        {
+          name: "Email Us",
+          url: "mailto:lap.mgmt.contact@gmail.com",
+          icon: <FaEnvelope />,
+        },
+      ],
+    },
   ];
 
   return (
@@ -77,7 +121,7 @@ export default function Home() {
         <div className="flex flex-col items-center">
           <div
             className="w-20 h-20 rounded-full bg-accent mb-4 bg-center bg-cover"
-            style={{ backgroundImage: `url('/profile-pic.png')` }}
+            style={{ backgroundImage: `url('/arclapain-profile.png')` }}
           ></div>
           <h1 className="text-xl font-semibold text-white">
             Llewellyn Paintsil
@@ -113,7 +157,7 @@ export default function Home() {
         {/* Footer Section */}
         <Link href="https://github.com/Llewellyn500/socialize">
           <button className="mt-6 bg-[#8a2be2] text-[#121212] font-bold py-2 px-6 rounded-full hover:bg-[#8a2be250] duration-700 transition">
-            Fork to edit
+            Create your own
           </button>
         </Link>
       </div>
