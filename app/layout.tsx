@@ -81,9 +81,6 @@ export default function RootLayout({
         {/* Canonical URL */}
         <link rel="canonical" href="https://socialize-llewellyn.vercel.app/" />
 
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-
         {/* Structured Data (JSON-LD) */}
         <script
           type="application/ld+json"
